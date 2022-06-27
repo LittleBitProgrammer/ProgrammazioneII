@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1523101345 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi4\esercizio 24 - concat. stringhe\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1461619043 source:c:\users\giovanni\desktop\uni\programmazione_ii_rizzardi-ciaramella\esercizi_programmazione_2\esercizio 2555\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

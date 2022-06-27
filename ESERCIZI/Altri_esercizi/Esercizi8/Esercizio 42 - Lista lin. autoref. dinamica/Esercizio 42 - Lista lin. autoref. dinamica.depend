@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1525452790 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi8\esercizio 42 - lista lin. autoref. dinamica\funzioni_lista.c
+	"mioheader.h"
+
+1525366070 c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi8\esercizio 42 - lista lin. autoref. dinamica\mioheader.h
+	<stdio.h>
+	<stdlib.h>
+
+1525452790 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi8\esercizio 42 - lista lin. autoref. dinamica\main.c
+	"mioheader.h"
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1523096507 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi4\esercizio 23 [statica] - concatenazione n caratteri\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

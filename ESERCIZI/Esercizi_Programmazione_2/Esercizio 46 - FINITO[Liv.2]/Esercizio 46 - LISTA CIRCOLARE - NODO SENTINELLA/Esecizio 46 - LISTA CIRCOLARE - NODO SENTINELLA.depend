@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1465556507 source:c:\users\utente\desktop\esecizio 46 - lista circolare - nodo sentinella\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

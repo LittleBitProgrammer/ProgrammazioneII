@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1462794966 source:c:\users\utente\desktop\programmazione_ii_rizzardi-ciaramella\esercizi_programmazione_2\esercizio 31 - finito[liv.3]\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1461937145 source:c:\users\utente\desktop\esercizio 27\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1462001419 source:c:\users\utente\desktop\programmazione_ii_rizzardi-ciaramella\esercizi_programmazione_2\esercizio 27 - finito[liv.2] dinamico\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

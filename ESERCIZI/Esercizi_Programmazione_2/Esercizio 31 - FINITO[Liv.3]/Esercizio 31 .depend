@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1462787547 source:c:\users\utente\desktop\esercizio 31 (ci proviamo a farlo xd)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1523100232 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi3\esercizio 19 - somma con criterio arresto natural\main.c
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+	<math.h>
+

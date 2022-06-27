@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1521639975 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi3\esercizio 13 - string to float\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+

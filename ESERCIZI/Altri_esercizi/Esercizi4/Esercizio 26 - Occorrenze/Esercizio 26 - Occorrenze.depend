@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1523445684 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi4\esercizio 26 - occorrenze\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

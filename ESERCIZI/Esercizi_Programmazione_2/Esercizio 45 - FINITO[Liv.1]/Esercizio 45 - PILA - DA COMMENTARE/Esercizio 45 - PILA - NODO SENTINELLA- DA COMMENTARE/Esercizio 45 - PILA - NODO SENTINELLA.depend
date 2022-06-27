@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1465157650 source:c:\users\utente\desktop\esercizio 45 - pila - nodo sentinella\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

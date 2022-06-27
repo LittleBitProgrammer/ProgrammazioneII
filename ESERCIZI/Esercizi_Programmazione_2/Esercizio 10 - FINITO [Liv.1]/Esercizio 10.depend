@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1459438218 source:c:\users\giovanni\desktop\esercizio 10\main.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
+1464085604 source:c:\users\utente\desktop\programmazione_ii_rizzardi-ciaramella\esercizi_programmazione_2\esercizio 10 - finito [liv.1]\main.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+

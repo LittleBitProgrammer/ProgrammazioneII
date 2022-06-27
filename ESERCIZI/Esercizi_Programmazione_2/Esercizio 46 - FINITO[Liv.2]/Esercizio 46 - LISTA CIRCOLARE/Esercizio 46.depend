@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1465395788 source:c:\users\utente\desktop\esercizio 46\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1465552583 source:c:\users\utente\desktop\esercizio 46 - lista concatenata\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

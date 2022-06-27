@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1521744468 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi3\estrazione campi floating point\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

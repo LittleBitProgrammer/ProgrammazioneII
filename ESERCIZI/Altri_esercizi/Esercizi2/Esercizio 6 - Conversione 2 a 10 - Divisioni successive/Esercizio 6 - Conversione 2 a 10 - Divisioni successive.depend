@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1521142676 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi2\esercizio 6 - conversione 2 a 10 - divisioni successive\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

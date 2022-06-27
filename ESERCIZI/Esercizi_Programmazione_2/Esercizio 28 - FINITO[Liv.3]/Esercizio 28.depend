@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1462354885 source:c:\users\utente\desktop\esercizio 28\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1462652409 source:c:\users\utente\desktop\programmazione_ii_rizzardi-ciaramella\esercizi_programmazione_2\esercizio 28 - da commentare\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1462652409 source:c:\users\utente\desktop\programmazione_ii_rizzardi-ciaramella\esercizi_programmazione_2\esercizio 28 - finito[liv.3]\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

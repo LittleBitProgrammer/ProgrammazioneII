@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1462701168 source:c:\users\utente\desktop\esercizio 30000\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1462736231 source:c:\users\utente\desktop\programmazione_ii_rizzardi-ciaramella\esercizi_programmazione_2\esercizio 30 - da commentare\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1462736329 source:c:\users\utente\desktop\programmazione_ii_rizzardi-ciaramella\esercizi_programmazione_2\esercizio 30 - finito[liv.1]\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+

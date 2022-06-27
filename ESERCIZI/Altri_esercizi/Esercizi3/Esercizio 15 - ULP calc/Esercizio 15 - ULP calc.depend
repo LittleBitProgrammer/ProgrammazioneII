@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1522186927 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi3\esercizio 15 - ulp calc\main.c
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+	<math.h>
+

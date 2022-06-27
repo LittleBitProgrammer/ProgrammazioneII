@@ -1,0 +1,210 @@
+/**[liv.1] Realizzare la gestione di una lista lineare mediante menu' (visualizzazione mediante visita,
+inserimento in testa, inserimento in mezzo, eliminazione in testa, eliminazione in mezzo) implementando
+la lista lineare con una struttura autoriferente dinamica.**/
+
+
+                  /**LIBRERIE**/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+//Definiamo un nuovo tipo di struct INFO_FIELD, ovvero il campo informazione del nodo
+typedef struct{
+    char nome[20]; //dato di tipo char contenuto nella struttura
+    short eta;  //dato di tipo short contenuto nella struttura
+    } INFO_FIELD; //nome campo informazione della struttura
+
+//Definiamo una struct PERSONA, cio un singolo nodo
+struct PERSONA
+    {
+        INFO_FIELD info; //dato di tipo INFO_FIELD(quindi dato che pu˜ accedere alla struttura precedente),contenuto nella struttura
+        struct PERSONA *p_next; //variabile puntatore(32 bit) autoriferente dinamica, cio che punta alla struttura stessa
+    };
+
+
+                    /**PROTOTIPI**/
+struct PERSONA *crea_lista(); //crea la lista vuota
+void insl_testa(INFO_FIELD nuovodato,struct PERSONA **p_head);//equivalente a: struct PERSONA *insl_testa(INFO_FIELD dato,struct PERSONA *p_head);
+void insl_nodo(INFO_FIELD nuovodato,struct PERSONA **p_punt);//equivalente a: struct PERSONA *insl_nodo(INFO_FIELD dato,struct PERSONA *p_head);
+INFO_FIELD legge_info_nodo(struct PERSONA **p_punt);//restituisce il campo informazione del nodo corrente
+void elim_testa(struct PERSONA**p_head);//elimina nodo in testa
+void elim_nodo(struct PERSONA **p_punt);//elimina nodo successore
+void visualizza_lista(struct PERSONA**);
+
+
+                    /**MAIN**/
+int main()
+{
+    struct PERSONA *head, *punt; //Definiamo due puntatori alla struttura PERSONA
+    short scegli;
+    INFO_FIELD nuovodato;
+
+    head=crea_lista();
+
+    while(1)
+    {
+        printf("\n\t\t MENU \n [1] Visualizzazione mediante visita\n [2] Inserimento in testa\n [3] Inserimento in mezzo\n"
+               " [4] Eliminazione in testa\n [5] Eliminazione in mezzo\n [6] Esci\n ---------> ");
+        fflush(stdin);
+        scanf("%hd",&scegli);
+
+
+        switch(scegli)
+        {
+            case 1: visualizza_lista(&head);break;
+
+            case 2: punt=head;/*aggiorna il puntatore al nodo corrente */
+                    printf("\n INSERIMENTO NODO IN TESTA");
+                    printf("\n\n Inserisci nome: ");
+                    fflush(stdin);
+                    scanf("%s", nuovodato.nome);
+                    printf(" Inserisci eta': ");
+                    fflush(stdin);
+                    scanf("%hd", &nuovodato.eta);
+                    insl_testa(nuovodato,&head);break;
+
+            case 3: punt=head;/*aggiorna il puntatore al nodo corrente */
+                    printf("\n INSERIMENTO NODO IN MEZZO (dopo nodo corrente)");
+                    printf("\n\n Inserisci nome: ");
+                    fflush(stdin);
+                    scanf("%s", nuovodato.nome);
+                    printf(" Inserisci eta': ");
+                    fflush(stdin);
+                    scanf("%hd", &nuovodato.eta);
+                    insl_nodo(nuovodato,&punt);break;
+
+            case 4: elim_testa(&head);break;
+            case 5: elim_nodo(&punt);break;
+            case 6: exit(EXIT_FAILURE);break;
+        }
+    }
+
+    return 0;
+}
+
+
+/**FUNCTION**/
+
+/*FUNCTION PER CREARE UNA LISTA VUOTA*/
+struct PERSONA *crea_lista() //chiamata alla function head=crea_lista();
+{
+    struct PERSONA *testa; //testa della lista
+        testa=NULL;
+        return testa;
+};
+
+/**/
+/*FUNCTION PER INSERIRE DATO IN TESTA ALLA LISTA
+Si ricorda che per l'inserimento in testa occorre:
+ - prima far puntare il nuovo nodo al nodo di testa
+ - poi aggiornare il puntatore "head" al nuovo nodo */
+void insl_testa(INFO_FIELD nuovodato, struct PERSONA **p_head)//**p_head punta a head cio alla testa della lista
+{
+    struct PERSONA *ptr; //puntatore alla struttura PERSONA
+
+    ptr=calloc(1, sizeof(struct PERSONA)); //alloca 1 spazio in memoria di sizeof(struct PERSONA) byte ovvero 32 byte
+    if(ptr==NULL)
+    {
+        printf("\n Allocazione fallita ");
+    }
+    ptr->info=nuovodato;
+    ptr->p_next=*p_head;
+    *p_head=ptr; //aggiorna head al nuovo nodo
+
+}
+
+/**/
+/*FUNCTION PER INSERIRE DATO DOPO IL NODO CORRENTE
+Si ricorda che per inserire un nodo nel mezzo occorre:
+ - prima modificare il puntatore del nuovo nodo in modo da farlo puntare al nodo successivo
+ - poi modificare il puntatore del nodo precedente in modo da farlo puntare al nuovo nodo */
+void insl_nodo(INFO_FIELD nuovodato, struct PERSONA **p_punt)// p_punt punta a punt
+{
+    struct PERSONA *ptr;
+
+    ptr=calloc(1, sizeof(struct PERSONA));
+    if(ptr==NULL)
+    {
+        printf("\n Allocazione fallita ");
+    }
+    ptr->info=nuovodato;
+    ptr->p_next=(*p_punt)->p_next;
+    (*p_punt)->p_next=ptr; //aggiorna punt al nodo corrente
+}
+
+/**/
+/*FUNCTION PER ELIMININARE NODO IN TESTA
+Si ricorda che per eliminare il nodo di testa non occorre far altro che modificare il nodo
+puntato da "head" facendolo puntare direttamente al nodo successivo al primo */
+void elim_testa(struct PERSONA **p_head) //chiamata: elim_testa(&p_head)
+{
+    struct PERSONA *ptr;
+
+    if((*p_head)->p_next == NULL) /*se  presente un solo nodo nella lista */
+    {
+        free(*p_head);
+        *p_head = NULL; /*la lista ora e' vuota*/
+	}
+	else /*altrimenti*/
+    {
+        ptr=(*p_head)->p_next; /*salva il link del nodo puntato dal nodo di testa */
+        free(*p_head); /*libera l'area puntata da p_head */
+        *p_head = ptr; /*aggiorna il puntatore alla testa della lista mediante il link salvato*/
+    }
+}
+
+/**/
+/*FUNCTION PER ELIMINARE NODO SUCCESSORE
+Si ricorda che per eliminare un nodo nel mezzo non occorre far altro che modificare il campo
+puntatore del nodo precedente facendolo puntare direttamente al nodo successivo */
+void elim_nodo(struct PERSONA **p_punt) //chiamata: elim_nodo(&punt)
+{
+    struct PERSONA *ptr;
+
+    ptr=(*p_punt)->p_next;/*si fa in modo che ptr sia il nodo successivo di quello corrente */
+       /*ptr punta al successore del nodo successivo a quello corrente:
+    corrente -> successivo -> successore */
+    (*p_punt)->p_next = ptr->p_next; /*si assegna il link puntato da ptr (successore) al nodo
+                                     corrente in modo che il successivo venga "saltato" */
+    /*libera l'area occupata dalla variabile ptr */
+    free(ptr);
+}
+
+/**/
+/*FUNCTION CHE RESITUTISCE IL CAMPO INFORMAZIONI DEL NODO CORRENTE*/
+INFO_FIELD legge_info_nodo(struct PERSONA **p_punt) //chiamata: info=legge_info_nodo(pt_nodo);
+{
+    /*definidce una struttura lista generica che condivide con il main solo il tipo
+    INFO_FIELD (globale) */
+    INFO_FIELD nuovodato; //definisce una nuova variabile di tipo INFO_FIELD (dichiarata globalmente)
+
+    nuovodato = (*p_punt)->info; /*gli si assegna il campo info del nodo puntato da p_punt */
+    return nuovodato;
+}
+
+/**/
+/*FUNCTIONE PER VISUALIZZARE LA LISTA MEDIANTE VISITA*/
+void visualizza_lista(struct PERSONA **p_head)
+{
+    int i=0;
+    struct PERSONA *ptr;
+
+    printf("\n LISTA ATTUALE");
+    if(*p_head != NULL)
+    {
+        /*stampa il nodo di testa*/
+        printf("\n Nodo[%d] Nome= %s - Eta'= %hd\n",i++, (*p_head)->info.nome, (*p_head)->info.eta);
+
+        /*inizializza il puntatore che scorre la lista*/
+        ptr =(*p_head)->p_next;
+
+        while (ptr != NULL) /*mentre la lista non e' finita */
+        {
+            /*stampa il nodo corrente */
+            printf(" Nodo[%d] Nome= %s - Eta'= %hd\n",i++, ptr->info.nome, ptr->info.eta);
+            ptr=(ptr)->p_next; /*aggiorna il puntatore */
+        }
+    }
+    else /*altrimenti stampa */
+        printf("***LISTA VUOTA***\n\n");
+}

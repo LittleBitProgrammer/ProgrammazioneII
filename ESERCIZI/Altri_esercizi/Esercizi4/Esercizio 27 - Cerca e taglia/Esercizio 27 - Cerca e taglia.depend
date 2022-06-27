@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1523470287 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi4\esercizio 27 - cerca e taglia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1522317869 source:c:\users\admin\desktop\onedrive\programmazione 2\esercizi\esercizi3\esercizio 16 - errore assoluto e relativo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
