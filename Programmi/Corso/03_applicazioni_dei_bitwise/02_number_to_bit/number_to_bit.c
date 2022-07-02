@@ -9,6 +9,7 @@
  * 
  */
 #include <stdio.h>
+#include <stdlib.h>
 #define MAX_LEN (sizeof(char *) * 8)
 
 /* Prototipi di funzione */
@@ -35,11 +36,12 @@ int main()
 
     do{
         /* Scelta dell'opzione da eseguire */
-        puts("Selezione");
+        puts("\nSelezione");
         puts("[0] Uscita dal programma!");
         puts("[1] Rappresentazione binaria di intero char!");
         puts("[2] Rappresentazione binaria di intero short!");
         puts("[3] Rappresentazione binaria di intero long!");
+        puts("[4] Rappresentazione binaria di intero float!");
 
         fflush(stdin);
         scanf("%hd", &menu);
@@ -55,12 +57,12 @@ int main()
             /* Inserimento dell'intero carattere */
             printf("Immettere intero char C: ");
             fflush(stdin);
-            scanf("%d", word.C[0]);
+            scanf("%hd", &word.C[0]);
 
             puts("Char in decimale, esadecimale e binario:");
             printf("C= %+10hd,    hex=%02x,", word.C[0], word.C[0]);
 
-            populate_bit(sizeof(char), word.C, bit_array);
+            populate_bit(len_byte, word.C, bit_array);
             break;
 
         case 2:
@@ -68,12 +70,12 @@ int main()
             /* Inserimento dell'intero short */
             printf("Immettere intero short S: ");
             fflush(stdin);
-            scanf("%hd", word.S[0]);
+            scanf("%hd", &word.S[0]);
 
             puts("Short in decimale, esadecimale e binario:");
             printf("S= %+10hd,    hex=%02x,", word.S[0], word.S[0]);
 
-            populate_bit(sizeof(short), word.C, bit_array);
+            populate_bit(len_byte, word.C, bit_array);
 
             break;
 
@@ -82,14 +84,29 @@ int main()
             /* Inserimento dell'intero long */
             printf("Immettere intero long L: ");
             fflush(stdin);
-            scanf("%ld", word.L);
+            scanf("%ld", &word.L);
 
             puts("Long in decimale, esadecimale e binario:");
-            printf("L= %+10hd,    hex=%02x,", word.L, word.L);
+            printf("L= %+10ld,    hex=%02x,", word.L, word.L);
 
-            populate_bit(sizeof(long), word.C, bit_array);
+            populate_bit(len_byte, word.C, bit_array);
 
             break;
+        case 4:
+            len_byte = sizeof(float);
+            /* Inserimento dell'intero float */
+            printf("Immettere reale float F: ");
+            fflush(stdin);
+            scanf("%f", &word.F);
+
+            puts("Long in decimale, esadecimale e binario:");
+            printf("F= %+10f,    hex=%02x,", word.F, word.F);
+
+            populate_bit(len_byte, word.C, bit_array);
+
+            break;
+        default:
+            exit(1);
         }
 
         /* Stampa dell' array dei bit */
@@ -126,7 +143,7 @@ void populate_bit(short len_byte, char array_characters[], short bit_array[MAX_L
             bit_array[(i * 8) + j] = temp_character & 1;
 
             /* Shift a dx della variabile in considerazione */
-            temp_character >> 1; 
+            temp_character >>= 1; 
         }
     }
 }
@@ -136,6 +153,6 @@ void print_array(short len_bit, short bit_array[MAX_LEN]){
 
     for (i = (len_bit * 8) - 1; i >= 0; i--)
     {
-        (i%4 == 0) ? printf("%1hd ", bit_array[i]) : printf("%1hd", bit_array[i]);
+        printf("%hd%s", bit_array[i], (i % 4 == 0) ? " " : "");
     }
 }
