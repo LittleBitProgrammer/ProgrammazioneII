@@ -7,8 +7,9 @@ make.exe: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Tue Jul 05 09:25:59 2022
+# Make data base, printed on Wed Jul 06 12:37:54 2022
 
 # Variables
 
@@ -59,7 +60,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-a25d4862-f400-4a5d-bca7-cb7589d1f377-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-c52a5594-6854-46d6-b211-b01d0a3a0f1f-sock
 # environment
 VSCODE_CWD = C:\Users\vecch\AppData\Local\Programs\Microsoft VS Code
 # default
@@ -91,7 +92,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_1512_SQCZAGOCEKJDWVNP
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16456_ZMUUTWCUHRYLYPJU
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -213,7 +214,7 @@ PROCESSOR_LEVEL = 6
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 1512
+VSCODE_PID = 16456
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-GOD7ROT
 # variable set hash-table stats:
@@ -225,7 +226,7 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-GOD7ROT
 
 # Directories
 
-# . (key c:/Users/vecch/Desktop/workspace/ProgrammazioneII, mtime 1656341888): 20 files, no impossibilities.
+# . (key c:/Users/vecch/Desktop/workspace/ProgrammazioneII, mtime 1657101391): 20 files, no impossibilities.
 
 # 20 files, no impossibilities in 1 directories.
 
@@ -290,6 +291,6 @@ GNUmakefile:
 # strcache performance: lookups = 29 / hit rate = 6%
 # hash-table stats:
 # Load=27/8192=0%, Rehash=0, Collisions=1/29=3%
-# Finished Make data base on Tue Jul 05 09:25:59 2022
+# Finished Make data base on Wed Jul 06 12:37:54 2022
 
  
