@@ -22,11 +22,7 @@ int Veicolo::get_ruote()
 
 Veicolo::Veicolo(){}
 
-Veicolo::Veicolo(int num_ruote, int num_passeggeri)
-{
-    this->num_passegeri = num_passeggeri;
-    this->num_ruote = num_ruote;
-}
+Veicolo::Veicolo(int num_ruote, int num_passeggeri) : num_ruote(num_ruote), num_passegeri(num_passegeri){}
 
 Veicolo::Veicolo(const Veicolo &veicolo)
 {
